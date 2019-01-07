@@ -1,19 +1,21 @@
 {
-    "min_packer_version": "0.12.1",
-    "variables": {
-      "project_id": "spicy-carbon",
-      "zone": "us-east4-a",
-      "consul_version": "1.2.2"
-    },
-    "builders": [{
-      "type": "googlecompute",
-      "image_name": "venkat-bake-test",
-      "image_family": "venky",
-      "project_id": "{{user `project_id`}}",
-      "source_image_family": "ubuntu-1604-lts",
-      "zone": "{{user `zone`}}",
-      "network_project_id": "spicy-carbon",
-      "subnetwork": "default",
-      "ssh_username": "ubuntu"
-    }]
+  "min_packer_version": "1.0.4",
+  "builders": [{
+  "type": "googlecompute",
+  "image_name": "rosco-testing-image1",
+  "image_family": "spicyfamily",
+  "project_id": "spicy-carbon",
+  "source_image_family": "centos-7",
+  "zone": "us-east4-a",
+  "subnetwork": "default",
+  "ssh_username": "centos"
+  }],
+  "provisioners": [
+  {
+  "type": "shell",
+  "inline": [
+  "sudo curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh",
+  "sudo chmod 777 install-logging-agent.sh"]
+  }
+  ]
   }
