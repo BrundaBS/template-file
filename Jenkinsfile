@@ -4,6 +4,7 @@
             stage('Test') {
                 steps {
                     echo 'Hello World ...'
+                    echo 'done'
                 }
             }
         }
