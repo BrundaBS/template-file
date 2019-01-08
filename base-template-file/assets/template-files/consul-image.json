@@ -1,8 +1,11 @@
 {
   "min_packer_version": "1.0.4",
+  "variables": {
+    "image-name": ""
+  },
   "builders": [{
   "type": "googlecompute",
-  "image_name": "rosco-testing-image1",
+  "image_name": "{{user `image-name`}}",
   "image_family": "spicyfamily",
   "project_id": "spicy-carbon",
   "source_image_family": "centos-7",
