@@ -24,7 +24,7 @@
         "type": "googlecompute",
         "project_id": "spicy-carbon",
         "tag": "jenkins",
-        //"image_name": "prod-centos"
+        "image_name": "prod-centos"
       }
     ]
   ]
