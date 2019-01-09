@@ -7,7 +7,7 @@
     {
     "type": "googlecompute",
     "image_name": "{{user `image_name`}}",
-    "image_family": "lowes-centos",
+    "image_family": "new-lowes-centos",
     "project_id": "spicy-carbon",
     "source_image_family": "centos-7",
     "zone": "us-east4-a",
