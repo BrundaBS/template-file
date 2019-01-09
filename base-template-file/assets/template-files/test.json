@@ -1,0 +1,24 @@
+{
+    "min_packer_version": "1.0.4",
+    "variables": {
+      "image_name": "{{env `IMAGE_NAME`}}"
+    },
+    "builders": [{
+    "type": "googlecompute",
+    "image_name": "{{user `image_name`}}",
+    "image_family": "spicyfamily",
+    "project_id": "spicy-carbon",
+    "source_image_family": "centos-7",
+    "zone": "us-east4-a",
+    "subnetwork": "default",
+    "ssh_username": "centos"
+    }],
+    "provisioners": [
+    {
+    "type": "shell",
+    "inline": [
+    "sudo curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh",
+    "sudo chmod 777 install-logging-agent.sh"]
+    }
+    ]
+    }
