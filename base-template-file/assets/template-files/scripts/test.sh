@@ -1,6 +1,6 @@
 gcloud compute instances create image-test --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
 
-gcloud compute ssh image-test --zone us-east4-c --ssh-key-file=./base-template-file/assets/template-files/id_rsa
+gcloud compute ssh image-test --zone us-east4-c --ssh-key-file=$SSH_KEY
 
 sudo /tmp/gossfolder/goss --version
 
