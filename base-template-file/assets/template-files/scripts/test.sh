@@ -1,10 +1,10 @@
 gcloud compute instances create image-test --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
 
-gcloud compute ssh image-test --zone us-east4-c --ssh-key-file=$SSH_KEY
+gcloud compute ssh image-test --zone us-east4-c --ssh-key-file=./spicy
 
-sudo /tmp/gossfolder/goss --version
+/tmp/gossfolder/goss --version
 
-sudo cd /tmp/gossfolder
+cd /tmp/gossfolder
  
 GOSS_FAIL_COUNT=$(sudo /tmp/gossfolder/goss validate | grep "Failed:" | awk '{print substr($4,1,1)}')
 
