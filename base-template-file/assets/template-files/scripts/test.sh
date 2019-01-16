@@ -1,9 +1,9 @@
 curl -s "http://metadata.google.internal/computeMetadata/v1/project/attributes/jenkins_ssh_key" -H "Metadata-Flavor: Google" >> /var/lib/jenkins/ssh_key
 chown -R jenkins:jenkins /var/lib/jenkins/ssh_key
 
-gcloud compute instances create venkyabc --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
+gcloud compute instances create venkyblack --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
 
-gcloud compute ssh venkyabc
+gcloud compute ssh venkyblack
 
 /tmp/gossfolder/goss --version
 
@@ -18,5 +18,4 @@ fi
 
 echo "Goss test failed"
 gcloud compute images delete $IMAGE_NAME
-
 
