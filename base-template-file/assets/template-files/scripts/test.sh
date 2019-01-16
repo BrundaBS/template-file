@@ -3,7 +3,7 @@ chown -R jenkins:jenkins /var/lib/jenkins/ssh_key
 
 gcloud compute instances create venkyblack --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
 
-gcloud compute ssh venkyblack
+gcloud compute ssh venkyblack --zone us-east4-c --ssh-key-file=/var/lib/jenkins/ssh_key --force-key-file-overwrite
 
 /tmp/gossfolder/goss --version
 
