@@ -23,7 +23,7 @@
     },
     {
     "type": "shell",
-    "script": "./base-template-file/assets/template-files/scripts/install.sh"
+    "script": "./base-template-file/assets/template-files/scripts/install_backup.sh"
     }
     ]
 }
