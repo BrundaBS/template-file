@@ -13,10 +13,10 @@ GOSS_FAIL_COUNT=$(sudo /tmp/gossfolder/goss validate | grep "Failed:" | awk '{pr
 
 if [ $GOSS_FAIL_COUNT == 0 ]
  then
- echo "Goss test failed!!!"
- gcloud compute images delete $IMAGE_NAME
+ echo "Goss test passed!!!"
 fi
 
-echo "Goss test passed"
+echo "Goss test failed"
+gcloud compute images delete $IMAGE_NAME
 
 
