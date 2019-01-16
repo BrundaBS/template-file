@@ -2,9 +2,9 @@ curl -s "http://metadata.google.internal/computeMetadata/v1/project/attributes/j
 chown -R jenkins:jenkins /var/lib/jenkins/ssh_key
 
 #gcloud compute instances create venkyblack --image=$IMAGE_NAME --subnet=default --zone=us-east4-c
-gcloud compute instances create venkyblack123 --image=venkat-20190116 --subnet=default --zone=us-east4-c
+gcloud compute instances create venkyblack123 --image=duplicate3 --subnet=default --zone=us-east4-c
 
-gcloud compute ssh venkyblack123 --zone us-east4-c --ssh-key-file=/var/lib/jenkins/ssh_key --force-key-file-overwrite
+gcloud compute ssh venkyblack123 --zone us-east4-c --ssh-key-file=/var/lib/jenkins/ssh_key --strict-host-key-checking=no
 
 /tmp/gossfolder/goss --version
 
