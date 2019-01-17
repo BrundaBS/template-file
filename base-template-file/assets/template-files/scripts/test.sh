@@ -15,7 +15,12 @@ if [ $GOSS_FAIL_COUNT == 0 ]
  echo "Goss test passed!!!"
 fi
 
+<<<<<<< HEAD
 
+=======
+echo "Goss test fail"
+gcloud compute images delete $IMAGE_NAME
+>>>>>>> 77e93375111825b45caea6fe77b706e310e9af23
 
 
 
