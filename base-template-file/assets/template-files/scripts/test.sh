@@ -8,7 +8,7 @@ export GOSS_RESULT=$(ssh -i ./sshkey  jenkins_user@image-test -oStrictHostKeyChe
 
 export GOSS_FAIL_COUNT=$(echo $GOSS_RESULT | grep "Failed:" | awk '{print substr($11,1,1)}')
 
-if [ $GOSS_FAIL_COUNT == "0" ]
+if [[ $GOSS_FAIL_COUNT == "0" ]]
  then
   echo "Goss test passed!!!"
   gcloud compute images add-labels $IMAGE_NAME --labels=stable=$GIT_COMMIT
