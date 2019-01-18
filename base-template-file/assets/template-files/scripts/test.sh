@@ -17,8 +17,8 @@ if [[ $GOSS_FAIL_COUNT == "0" ]]
 fi
 
 echo "Goss test Failed!!!"
-gcloud compute images delete $IMAGE_NAME --quiet
-gcloud compute instances delete image-test --zone=us-east4-c --quiet
+#gcloud compute images delete $IMAGE_NAME --quiet
+#gcloud compute instances delete image-test --zone=us-east4-c --quiet
 exit 1
 
 
