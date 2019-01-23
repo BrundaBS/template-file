@@ -7,7 +7,7 @@ sleep 20
 
 export GOSS_RESULT=$(ssh -i ./sshkey  jenkins_user@image-test -oStrictHostKeyChecking=no '/tmp/gossfolder/goss --version; cd /tmp/gossfolder; sudo /tmp/gossfolder/goss validate')
 
-export GOSS_FAIL_COUNT=$(echo $GOSS_RESULT | grep "Failed:" | awk '{print substr($11,1,1)}')
+export GOSS_FAIL_COUNT=$(echo $GOSS_RESULT | cut --delimiter=, -f2 | awk '{print $2}')
 
 echo "fail count:"$GOSS_FAIL_COUNT
 if [[ $GOSS_FAIL_COUNT == "0" ]]
