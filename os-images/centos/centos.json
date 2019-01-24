@@ -23,12 +23,12 @@
     },
     {
       "type": "file",
-      "source": "./goss.yaml",
+      "source": "./os-images/{{user `image_name`}}/goss.yaml",
       "destination": "/tmp/goss/"
     },
     {
     "type": "shell",
-    "script": "./install.sh"
+    "script": "./os-images/{{user `image_name`}}/install.sh"
     }
     ]
 }
