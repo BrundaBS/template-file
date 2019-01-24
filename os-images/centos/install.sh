@@ -6,7 +6,5 @@ sudo chmod 777 install-logging-agent.sh
 
 sudo yum update 
 
-sudo yum -y install java-1.8.0-openjdk-headless
 
-sudo yum -y install java-1.8.0-openjdk-devel
 

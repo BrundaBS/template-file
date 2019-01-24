@@ -18,8 +18,13 @@
     "provisioners": [
     {
     "type": "file",
-    "source": "./gossfolder",
+    "source": "../../goss",
     "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "./goss.yaml",
+      "destination": "/tmp/goss/"
     },
     {
     "type": "shell",
