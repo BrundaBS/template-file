@@ -1,7 +1,8 @@
 {
     "min_packer_version": "1.0.4",
     "variables": {
-      "image_name": "{{env `IMAGE_NAME`}}"
+      "image_name": "{{env `IMAGE_NAME`}}",
+      "file": "{{ env 'FILE'}}"
     },
     "builders": [
     {
@@ -23,12 +24,12 @@
     },
     {
       "type": "file",
-      "source": "./os-images/{{user `image_name`}}/goss.yaml",
+      "source": "./os-images/{{user `file`}}/goss.yaml",
       "destination": "/tmp/goss/"
     },
     {
     "type": "shell",
-    "script": "./os-images/{{user `image_name`}}/install.sh"
+    "script": "./os-images/{{user `file`}}/install.sh"
     }
     ]
 }
