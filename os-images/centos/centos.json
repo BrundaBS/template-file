@@ -18,7 +18,7 @@
     "provisioners": [
     {
     "type": "file",
-    "source": "../../goss",
+    "source": "./goss",
     "destination": "/tmp"
     },
     {
