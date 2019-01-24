@@ -1,4 +1,0 @@
-service:
-  sshd:
-    enabled: true
-    running: true
